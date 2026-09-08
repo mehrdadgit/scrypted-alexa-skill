@@ -1,0 +1,4 @@
+{
+  "app": "node --import tsx bin/app.ts",
+  "versionReporting": false
+}

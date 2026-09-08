@@ -1,0 +1,15 @@
+# Copy outside this repository to ~/.cloudflared/config.yml on the tunnel host.
+# Replace every placeholder. cloudflared does not load this project's .env.local.
+tunnel: YOUR_TUNNEL_UUID
+credentials-file: /home/YOUR_USER/.cloudflared/YOUR_TUNNEL_UUID.json
+
+ingress:
+  - hostname: cameras.example.com
+    path: ^/endpoint/scrypted-alexa-au/public/$
+    service: https://192.168.1.100:10443
+    originRequest:
+      # PEM certificate/CA trusted specifically for your Scrypted origin.
+      caPool: /home/YOUR_USER/.cloudflared/scrypted-ca.pem
+      # Must match a DNS name in the origin certificate's SANs.
+      originServerName: scrypted.home.arpa
+  - service: http_status:404

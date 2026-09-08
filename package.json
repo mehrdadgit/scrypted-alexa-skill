@@ -1,0 +1,48 @@
+{
+  "name": "scrypted-alexa-au",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal Australian Alexa camera skill backed by Scrypted",
+  "workspaces": [
+    "scrypted-plugin"
+  ],
+  "scripts": {
+    "build": "tsc --noEmit && npm run build --workspace scrypted-plugin",
+    "test": "node --import tsx --test test/*.test.ts",
+    "check": "npm run build && npm test && npm run synth",
+    "cdk": "node scripts/run.mjs cdk",
+    "synth": "node scripts/run.mjs cdk synth --quiet",
+    "predeploy": "node scripts/run.mjs script scripts/predeploy.ts",
+    "deploy": "node scripts/run.mjs cdk deploy --outputs-file .local/cdk-outputs.json",
+    "ask": "node scripts/run.mjs ask",
+    "aws": "node scripts/run.mjs aws",
+    "configure": "node scripts/run.mjs script scripts/configure.ts",
+    "configure:env": "node scripts/run.mjs script scripts/configure.ts --env",
+    "skill": "node scripts/run.mjs script scripts/skill.ts",
+    "user": "node scripts/run.mjs script scripts/user.ts",
+    "scrypted:login": "node scripts/run.mjs scrypted-login",
+    "scrypted:deploy": "node scripts/run.mjs scrypted-deploy",
+    "bridge:secret": "node scripts/run.mjs script scripts/bridge-secret.ts",
+    "diagnose": "node scripts/run.mjs script scripts/diagnose.ts",
+    "outputs:refresh": "node scripts/run.mjs script scripts/outputs.ts",
+    "release:check": "node scripts/release-check.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.0.0",
+    "aws-cdk-lib": "^2.200.0",
+    "aws-jwt-verify": "^5.0.0",
+    "constructs": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "ask-cli": "^2.30.0",
+    "aws-cdk": "^2.1000.0",
+    "esbuild": "^0.25.0",
+    "terser-webpack-plugin": "^5.6.1",
+    "tsx": "^4.0.0",
+    "typescript": "^5.8.0"
+  }
+}

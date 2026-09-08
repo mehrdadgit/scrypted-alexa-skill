@@ -1,0 +1,22 @@
+node_modules/
+cdk.out/
+.local/
+.ask/
+.env
+.env.*
+!.env.local.example
+config.local.json
+scrypted-plugin/dist/
+scrypted-plugin/out/
+scrypted-plugin/fs/
+*.tgz
+.DS_Store
+
+# Local connector credentials and developer tools
+.cloudflared/
+.aws/
+.scrypted/
+*.pem
+*.key
+*.p12
+*.log

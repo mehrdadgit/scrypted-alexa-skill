@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "lib": ["ES2022", "DOM"]
+  },
+  "include": ["bin/**/*.ts", "lib/**/*.ts", "lambda/**/*.ts", "shared/**/*.ts", "scripts/**/*.ts", "test/**/*.ts", "scrypted-plugin/src/**/*.ts"]
+}

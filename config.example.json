@@ -1,0 +1,10 @@
+{
+  "skillName": "My Scrypted Cameras",
+  "scryptedEndpoint": "https://cameras.example.com/endpoint/scrypted-alexa-au/public/",
+  "alexaRedirectUrls": [
+    "https://pitangui.amazon.com/api/skill/link/YOUR_VENDOR_ID",
+    "https://layla.amazon.com/api/skill/link/YOUR_VENDOR_ID",
+    "https://alexa.amazon.co.jp/api/skill/link/YOUR_VENDOR_ID"
+  ],
+  "skillId": ""
+}
