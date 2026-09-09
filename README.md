@@ -31,7 +31,7 @@ You need Node.js 22 or newer, AWS CLI v2 with a chosen authenticated profile, an
 
 In Scrypted, add your **RTSP** camera and confirm live view works. Install the **WebRTC** plugin and enable its extension for that camera. Start with an H.264 stream and supported audio; Scrypted may need to transcode incompatible codecs. Leave TURN enabled in the WebRTC plugin when your network needs a relay. An HTTPS tunnel only carries signaling; it does not solve WebRTC media connectivity by itself.
 
-Run commands from a macOS/Linux development computer (or WSL2) that can reach your Scrypted server. The original development platform was macOS; other platforms have not been verified end to end. The server may be a Jetson, another Linux/Docker host, or another supported Scrypted installation. Uploading the plugin does not require rebuilding the Scrypted Docker image. Keep its data volume persistent.
+Run commands from a macOS/Linux development computer (or WSL2) that can reach your Scrypted server. The original development platform was macOS; other platforms have not been verified end to end. The server may be any supported Scrypted installation. Uploading the plugin does not require rebuilding the Scrypted Docker image. Keep its data volume persistent.
 
 Start with a clone of this repository and `cd` into it. For AWS CLI installation, profile creation, deployment permissions and Alexa developer registration, follow [account setup](docs/aws-setup.md). All addresses below are examples: replace them with your own.
 
